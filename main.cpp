@@ -8,11 +8,11 @@ using namespace std;
 int main() {
     vector<Student> students;
 
-    // Load from CSV file using your brother's class
+    // Load from CSV file using Samip's class
     FileOperations fileOps(students, "student-details.csv");
     fileOps.loadStudents();
 
-    // Handle user actions using your class
+    // Handle user actions using Johnson's class
     StudentOperations studentOps(students);
 
     int choice;
