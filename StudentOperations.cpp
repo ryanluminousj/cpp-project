@@ -18,19 +18,19 @@ void StudentOperations::addStudent() {
     cout << "Student added successfully!" << endl;
 }
 
-void StudentOperations::searchStudentByRoll() {
-    int roll;
-    cout << "Enter roll to search: ";
-    cin >> roll;
+void StudentOperations::searchStudentByName() {
+    string name;
+    cout << "Enter name to search: ";
+    cin.ignore();
+    getline(cin, name);
 
     bool found = false;
     for (const auto& student : students) {
-        if (student.roll == roll) {
-            cout << "Found student: Roll: " << student.roll 
-                 << ", Name: " << student.name 
+        if (student.name == name) {
+            cout << "Found student: Name: " << student.name 
+                 << ", Roll: " << student.roll 
                  << ", Phone: " << student.phone << endl;
             found = true;
-            break;
         }
     }
     if (!found) {

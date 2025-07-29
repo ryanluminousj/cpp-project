@@ -19,7 +19,7 @@ int main() {
     do {
         cout << "\n===== Student Management Menu =====\n";
         cout << "1. Add Student\n";
-        cout << "2. Search Student by Roll\n";
+        cout << "2. Search Student by Name\n";
         cout << "3. Delete Student by Roll\n";
         cout << "4. Save & Exit\n";
         cout << "Enter your choice: ";
@@ -30,7 +30,7 @@ int main() {
                 studentOps.addStudent();
                 break;
             case 2:
-                studentOps.searchStudentByRoll();
+                studentOps.searchStudentByName();
                 break;
             case 3:
                 studentOps.deleteStudentByRoll();
