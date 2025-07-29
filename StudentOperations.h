@@ -14,7 +14,7 @@ public:
     StudentOperations(vector<Student>& students);
 
     void addStudent();
-    void searchStudentByRoll();
+    void searchStudentByName();
     void deleteStudentByRoll();
 };
 
