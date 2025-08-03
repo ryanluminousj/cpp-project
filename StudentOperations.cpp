@@ -43,11 +43,12 @@ void StudentOperations::deleteStudentByRoll() {
     cout << "Enter roll to delete: ";
     cin >> roll;
 
-    for(auto it = students.begin(); it != students.end(); ++it) {
+    for (auto it = students.begin(); it != students.end(); ++it) {
         if (it->roll == roll) {
             students.erase(it);
             cout << "Student with roll " << roll << " deleted successfully!" << endl;
             return;
         }
     }
+    cout << "Student with roll " << roll << " not found." << endl;
 }
