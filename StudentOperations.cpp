@@ -1,4 +1,5 @@
 #include "StudentOperations.h"
+#include<algorithm>
 #include <iostream>
 using namespace std;
 
@@ -24,9 +25,13 @@ void StudentOperations::searchStudentByName() {
     cin.ignore();
     getline(cin, name);
 
+    //convert input to lowercase
+    transform(name.begin(), name.end(), name.begin(), ::tolower);
     bool found = false;
     for (const auto& student : students) {
-        if (student.name == name) {
+        string studentNameLower = student.name;
+        transform(studentNameLower.begin(), studentNameLower.end(), studentNameLower.begin(), ::tolower);
+        if (studentNameLower == name) {
             cout << "Found student: Name: " << student.name 
                  << ", Roll: " << student.roll 
                  << ", Phone: " << student.phone << endl;
