@@ -9,7 +9,7 @@ void StudentOperations::addStudent() {
     cout << "Enter roll number: ";
     cin >> newStudent.roll;
     cout << "Enter name: ";
-    cin.ignore(); // Clear newline character from input buffer
+    cin.ignore();
     getline(cin, newStudent.name);
     cout << "Enter phone number: ";
     getline(cin, newStudent.phone);
@@ -43,13 +43,12 @@ void StudentOperations::deleteStudentByRoll() {
     cout << "Enter roll to delete: ";
     cin >> roll;
 
-    for(auto it = students.begin(); it != students.end(); ++it) {
+    for (auto it = students.begin(); it != students.end(); ++it) {
         if (it->roll == roll) {
             students.erase(it);
             cout << "Student with roll " << roll << " deleted successfully!" << endl;
             return;
         }
     }
+    cout << "Student with roll " << roll << " not found." << endl;
 }
-
-
